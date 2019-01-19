@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+table,tr,td {
+    border: 1px solid red;
+}
+td {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+    </style>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                //选中没有文本的元素
+               // $("td:empty").css("background-color","red");
+                //选中含有文本的元素
+                $("td:parent").css("background-color","red");
+            })
+
+        })
+    </script>
+</head>
+<body>
+<table >
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td>单元格</td></tr>
+    <tr><td>单元格</td><td>单元格</td><td></td></tr>
+</table>
+<input id="btn" type="button" value="按钮">
+
+</body>
+</html>

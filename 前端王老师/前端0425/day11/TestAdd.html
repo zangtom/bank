@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //两个错误
+        //当整个文档页面加载完时，调用此方法
+        window.onload=function () {
+            //value只适用于表单元素，其余的元素用innerHTML
+            var a= document.getElementById("p1").innerHTML;
+            alert(a);
+        }
+
+    </script>
+</head>
+<body>
+<p id="p1" >段落标签</p>
+
+</body>
+</html>

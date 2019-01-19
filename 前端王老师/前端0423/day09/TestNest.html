@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套函数练习</title>
+    <script type="text/javascript" >
+        function result1(a) {
+            function result2(b) {
+                var square=b*b;
+                return  square;
+            }
+            var m=1;
+            for(var i=1;i<=result2(a);i++){
+                //进行阶乘
+                m=m*i;
+            }
+            document.write(m);
+            return m;
+        }
+        result1(5);
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            //创建元素节点
+            var a=document.createElement("h1");
+            //创建文本节点
+            var b=document.createTextNode("你好");
+            //把文本节点插入到元素节点中
+            a.appendChild(b);//<h1>你好</h1>
+            //把节点插入到body中
+            document.body.appendChild(a);
+            //创建超链接标签
+            var m=document.createElement("a");
+            //添加属性节点
+            m.href="http://www.baidu.com";
+            var n=document.createTextNode("跳转百度");
+            // 文本节点往元素节点插入
+            m.appendChild(n);
+            document.body.appendChild(m);
+        }
+    </script>
+</head>
+<body>
+<a href="......">超链接</a>
+
+</body>
+</html>

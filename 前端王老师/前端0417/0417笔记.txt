@@ -1,0 +1,71 @@
+css控制背景样式:
+background-attachment     设置背景图像是否固定
+scroll   滚动(默认值)
+fixed    固定   
+
+超链接伪类：
+在css中，我们使用超链接伪类定义超链接在不同时期的不同样式
+a选择器:link{css样式}         定义a元素未访问时的样式 
+a选择器:visited{css样式}      定义a元素访问后的样式
+a选择器:hover{css样式}        定义鼠标经过显示的样式
+a选择器:active{css样式}       定义鼠标单击激活时的样式
+love hate 爱恨原则
+:hover{css样式} 可以定义任何一个元素在鼠标经过时的样式 
+
+css设置图片样式：
+1.width:像素值   height:像素值     设置图片大小
+2.border:5px solid red;            设置图片边框
+3.text-align       水平对齐方式
+4.vertical-align   垂直对齐方式
+定义行内元素相对于该元素的垂直对齐方式
+top         顶部对齐
+middler     中部对齐
+baseline    基线对齐
+bottom      底部对齐
+5.float浮动(左浮、右浮)
+  
+css设置列表样式：
+列表项符号list-style-type
+1.有序列表：
+decimal           默认值，数字1、2、3……
+lower-roman	  小写罗马数字i、ii、iii……
+upper-roman	  大写罗马数字I、II、III……
+lower-alpha	  小写英文字母a、b、c……
+upper-alpha	  大写英文字母A、B、C……   
+2.无序列表      
+disc          默认值,实心圆
+circle        空心圆
+square        实心正方形
+list-style-type：none   消除列表样式
+list-style-image:url(图像地址)  设置列表样式
+
+css盒子模型:
+所有HTML元素都可以看作一个盒子,一个网页由很多的盒子组成，这些盒子
+会互相影响
+组成部分:
+1.content   内容:文字或图片
+2.border    边框:元素边框
+3.padding   内边距:定义内容与边框内部之间的距离
+4.margin    外边距:定义页面中元素与元素之间的距离
+
+padding写法(3种)
+padding:50px;  表示四个方向的内边距都是50
+padding:30px 80px;  内边距(上下)30px  内边距(左右)80px  
+padding:20px 40px 60px 80px; 上20  右40 下60 左80 
+
+
+
+
+
+
+
+
+
+
+ 
+   
+
+  
+
+
+

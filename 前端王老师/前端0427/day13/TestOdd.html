@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ul{
+            list-style-type: none;
+        }
+        li{
+            height: 40px;
+            width: 400px;
+          /*  border: 1px solid red;*/
+        }
+    </style>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //奇数
+            $("li:odd").css("background-color","yellow");
+            //偶数   0
+            $("li:even").css("background-color","green");
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

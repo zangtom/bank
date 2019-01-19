@@ -1,0 +1,7 @@
+SELECT * FROM yupp.stu_info s;
+SELECT * FROM mysql.`user` u;
+grant all privileges on *.* to 'probe'@'%' identified by 'probeaction';
+revoke all privileges on *.*from 'probe'@'%';
+flush privileges;
+
+grant select,insert on yupp.* to 'zrc'@localhost identified by "zrc";

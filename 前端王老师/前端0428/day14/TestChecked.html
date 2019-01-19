@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单属性伪类选择器</title>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+            /*   var a= $("input:checked").val();
+               alert(a);*/
+                var a = $("input:checked").map(function(){
+                    //$(this)  获取当前元素对象
+                    return $(this).val();
+                }).get();
+                alert(a);
+            })
+        })
+    </script>
+</head>
+<body>
+<input id="apple" type="checkbox" checked="checked" value="苹果"><label for="apple">苹果</label>
+<input id="taozi" type="checkbox" value="桃子"><label for="taozi">桃子</label>
+<input id="yingtao" type="checkbox" value="樱桃" checked="checked"><label for="yingtao">樱桃</label>
+<input id="btn" type="button" value="按钮">
+
+</body>
+</html>

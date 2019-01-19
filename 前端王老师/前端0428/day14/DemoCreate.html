@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                //注意对于复杂节点本身的属性就有双引号，所以我们这里使用单引号括起来
+                var $li = "<li><a href='http://www.baidu.com' target='_blank' >百度一下</a></li>";
+               // $("ul").append($li);
+                $($li).appendTo("ul");//从左往右
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li><a href="http://www.baidu.com" target="_blank" >百度一下</a></li>
+    <li><a href="http://www.baidu.com" target="_blank" >百度一下</a></li>
+    <li><a href="http://www.baidu.com" target="_blank">百度一下</a></li>
+</ul>
+<input id="btn" type="button" value="添加"/>
+
+</body>
+</html>

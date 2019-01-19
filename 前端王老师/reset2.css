@@ -1,0 +1,32 @@
+/*清除页面元素默认样式*/
+
+body,h1,h2,h3,h4,h5,h6,p,ol,ul{
+	margin: 0;
+}
+ol,ul,p,input{
+	padding: 0;
+}
+ol,ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+	display: block;
+}
+em{
+	font-style: normal;
+}
+.clear:after{
+	content:"";display: block;clear: both;
+}
+clear{
+	zoom:1;
+}
+
+
+
+
+

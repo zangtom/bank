@@ -1,0 +1,72 @@
+Date日期对象：
+1.获取时间：
+getFullYear()获取当前年份
+getMonth()获取当前月份（0表示一月）
+getDate()获取当天(1-31之间)
+getHours()获取小时数(0-23之间)
+getMinutes()获取分钟数(0-59之间)
+getSeconds()获取秒数(0-59之间)
+2.设置时间：（返回调整过的日期的毫秒表示）
+setFullYear()设置年份
+setMonth()  设置月份
+setDate()设置日数
+setHours()设置小时数
+setMinutes()设置分钟数
+setSeconds()设置秒数
+3.转换时间
+toLocaleString()  转换成本地时间格式
+toUTCString()     转换成世界时间格式
+getUTCDay()       返回表示星期几的一个数字
+
+String字符串对象：
+length属性      获取字符串长度
+match()方法     检索字符串(如果存在，返回要检索的字符串；如果不存在，返回null)
+indexOf()方法   检索字符串索引(如果存在，返回该索引；如果不存在，返回-1)
+replace()方法   在字符串中用一些字符替换另一些字符，返回一个新的字符串
+charAt()方法    通过角标获取字符串中的某个字符
+toLowerCase()方法   将大写字符串转换为小写
+toUpperCase()方法   将小写字符串转换为大写
+concat()方法        字符串拼接
+split()方法         字符串的分割
+
+Array数组对象：
+3种创建方式：
+1.创建一个长度为0的数组：   var 数组名=new Array();
+2.创建长度为n的数组:        var 数组名=new Array(n);
+3.创建指定长度的数组并赋值: var 数组名=new Array(元素1,元素2,元素3);
+方法：
+slice(start,end)      获取数组中的某段数组元素
+unshift(新元素1，新元素2你,...,新元素n) 在数组开头中添加元素(返回值为新数组长度)
+push(新元素1，新元素2你,...,新元素n) 在数组末尾中添加元素(返回值为新数组长度)
+shift()   删除数组中的第一个元素，并且返回第一个元素的值 
+pop()     删除数组中的最后一个元素，并且返回最后一个元素的值 
+join(“分隔符”)    添加分隔符，默认为逗号
+concat(数组2,数组3,…,数组n)   数组的拼接
+sort(函数)     对数组中的元素进行排序 
+reverse()      对数组中的元素进行反向排列
+
+数值对象：
+1.Math对象：
+见图片
+2.Number对象：
+
+window对象:
+主要用来控制由窗口弹出的对话框、打开窗口或关闭窗口、控制窗口的大小和位置等
+window.open(URL,窗口名称,属性);       打开窗口
+window.close() / close() / this.close()  关闭当前窗口
+窗口名.close()      关闭子窗口
+参数3:属性
+top:子窗口距浏览器顶部的距离(单位:px)
+left:子窗口距浏览器左边的距离(单位:px)
+width:子窗口的宽度(单位:px)
+height:子窗口的高度(单位:px)
+
+
+
+
+
+
+
+
+
+

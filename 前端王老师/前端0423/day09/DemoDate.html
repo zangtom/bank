@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //获取当前时间
+        var a = new Date();
+        //世界时间
+        var b = a.toUTCString();
+        //本地时间
+        var m=a.toLocaleString();
+        document.write(b+"<br>");
+        document.write(m+"<br>");
+        //指定时间
+       var date= new Date("1997-10-25");
+       document.write(date+"<br>");
+       //获取年份
+       document.write(date.getFullYear()+"<br>");
+       //获取月份
+        document.write(date.getMonth()+1+"<br>");
+        //获取当日
+        document.write(date.getDate()+"<br>");
+   /* var v=date.setFullYear(1996);
+      document.write(v);*/
+        var d = new Date();
+        //设置年份
+        d.setFullYear(1992);
+        //设置月份
+        d.setMonth(1);
+        //设置当日
+        d.setDate(21);
+        document.write(d);
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

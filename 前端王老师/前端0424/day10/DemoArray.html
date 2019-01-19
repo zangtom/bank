@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //字符串数组
+        var arr1=new Array("哪吒","李靖","风火轮");
+        //数值型数组
+        var arr2=new Array(1,2,3,4);
+        document.write(arr1+"<br>"+arr2+"<br>");
+        var arr=new Array(5);
+        arr[0]=1;
+        arr[1]=1;
+        arr[2]=1;
+        arr[3]=1;
+        arr[4]=1;
+        document.write(arr+"<br>");
+        document.write(arr1.slice(0,2)+"<br>");
+      /*  arr1.unshift("你好","世界"+"<br>");*/
+      //在原数组开头添加元素
+        var a=arr1.unshift("你好","世界");
+        document.write(a+"<br>");
+        //在原数组末尾添加元素
+        arr1.push("唐僧","白龙马");
+        document.write(arr1+"<br>");
+        //删除数组中第一个元素
+     /*   arr1.shift();
+        document.write(arr1+"<br>");*/
+        document.write(arr1.shift()+"<br>");
+        //删除数组中最后一个元素
+        arr1.pop();
+        document.write(arr1+"<br>");
+        //添加分隔符，默认是逗号
+        document.write(arr1.join("$")+"<br>");
+        //数组拼接
+        document.write(arr1.concat(arr2)+"<br>");
+
+        //比较数组中相邻两个元素的大小   负数----不变    正数---换位
+        function up(a,b) {//升序
+            return a-b;
+        }
+        function down(a,b) {//降序
+            return b-a;
+        }
+        var arr3=new Array(2,5,1,0,9);
+        //从小到大
+        arr3.sort(up);
+        document.write(arr3+"<br>");
+        //从大到小
+        arr3.sort(down);
+        document.write(arr3+"<br>");
+        //反向排列
+        document.write(arr3.reverse());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

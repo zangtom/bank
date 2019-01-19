@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        document.write("水仙花数有：");
+        for (var i = 100; i < 1000; i++){
+            var a = i % 10;//提取个位数
+            var b = (i / 10) % 10; //提取十位数
+            b = parseInt(b);
+            var c = i / 100;//提取百位数
+            c = parseInt(c);
+            if (i == (a * a * a + b * b * b + c * c * c)) {
+                document.write(i + " ");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

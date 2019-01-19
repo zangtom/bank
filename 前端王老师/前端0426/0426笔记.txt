@@ -1,0 +1,64 @@
+5.节点操作:
+创建节点
+createElement()创建元素节点
+createTextNode()创建文本节点
+插入节点
+appendChild()和insertBefore()把文本节点插入到元素节点中
+语法：obj.appendChild(new);         obj表示当前节点，new表示新节点
+语法：obj.insertBefore(new,ref);    obj表示父节点;new表示新的子节点；ref指定
+一个节点，在这个节点前插入的新的节点
+删除节点
+removeChild()
+语法: obj.removeChild(oldChild);
+obj:当前节点   
+oldChild表示需要当前节点内部的某个子节点
+复制节点
+cloneNode()
+语法: obj.cloneNode(bool)
+obj:被复制的节点
+bool:是一个布尔值
+1或true:复制节点本身以该及节点下的所有子节点
+0或false:仅仅复制节点本身，不包括该节点下的子节点
+
+js事件:
+事件往往是由页面的一些动作引起的，例如：用户按下鼠标或提交表单、甚至在页面移动鼠标时，事件都会产生。
+1.调用事件的方式(2种):
+在script标签中调用
+在元素中调用
+2.事件种类
+鼠标事件:
+onclick       鼠标单击事件
+ondblclick    鼠标双击事件
+onmouseover   鼠标移入事件
+onmouseout    鼠标移出事件
+onmousedowm   鼠标按下事件
+onmouseup     鼠标松开事件
+键盘事件:
+onkeydown     按键被按下时触发的事件(数字键、字母键、功能键)
+onkeypress    按键被按下到松开整个过程中触发的事件(数字键、字母键)区分大小写
+onkeyup       按键被松开时触发的事件(数字键、字母键、功能键)   
+表单事件:
+onfocus       获取焦点时触发的事件
+onblur        失去焦点时触发的事件
+onselect      选中文本框text或文本域textarea时触发
+编辑事件:
+oncopy        复制事件
+oncut         剪切事件
+onpaste       粘贴事件
+页面相关事件:
+onload(加载事件):在文档加载完毕再执行的事件
+onresize(页面大小事件):
+onerror(出错事件):
+语法:window.通用事件名=要执行的js代码
+
+
+
+
+
+
+
+
+
+
+
+   

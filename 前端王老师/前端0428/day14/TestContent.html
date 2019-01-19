@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容操作</title>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                alert( $("#p1").html());
+            })
+            $("#btn2").click( function () {
+                $("#p2").html("hello");
+            })
+        })
+    </script>
+</head>
+<body>
+<p id="p1"><strong>你好</strong></p>
+<p id="p2">你好</p>
+<hr>
+<input id="btn1" type="button" value="获取第一行文字">
+<input id="btn2" type="button" value="获取第二行文字">
+
+</body>
+</html>

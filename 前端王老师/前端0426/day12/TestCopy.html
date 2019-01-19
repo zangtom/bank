@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function add() {
+            var e = document.getElementById("list");
+            document.body.appendChild(e.cloneNode(1));
+        }
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li id="li1">HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>jQuery</li>
+</ul>
+<input type="button" value="复制" onclick="add()" />
+</body>
+</html>

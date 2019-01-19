@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新年倒计时</title>
+    <script type="text/javascript">
+        var m=5;
+        window.onload=function () {
+            //重复性定时器
+        setInterval("cutDown()",1000);
+        }
+        function cutDown() {
+            if(m>0){
+                m--;
+                document.getElementById("span1").innerHTML=m;
+            }
+        }
+    </script>
+</head>
+<body>
+<p>新年倒计时:<span id="span1">5</span></p>
+</body>
+</html>

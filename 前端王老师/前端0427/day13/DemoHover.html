@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单伪类选择器</title>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("li:not(#li3)").css("color","red");
+            $("li:first").css("color","yellow");
+            $("li:last").css("color","yellow");
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>java</li>
+    <li>HTML</li>
+    <li id="li3">CSS</li>
+    <li>javascript</li>
+    <li>jQuery</li>
+</ul>
+</body>
+</html>

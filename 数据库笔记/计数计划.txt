@@ -1,0 +1,11 @@
+call yupp.member_getcount();
+create event yupp.event_member_getcount
+on schedule every 1day starts '2018-04010 00:00:00'
+on completion not preserve enable do
+call yupp.member_getcount();
+
+show variables likes'event%';
+set global event_scheduler=on;
+select *from mysql.event;
+
+)

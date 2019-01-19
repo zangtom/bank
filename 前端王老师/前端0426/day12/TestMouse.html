@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function () {
+            /*  document.getElementById("div1").onmouseover=function () {
+          this.style.backgroundColor="yellow";
+
+      }*/
+            var a= document.getElementById("div1");
+            //鼠标移入事件
+            a.onmouseover=function () {
+                a.style.backgroundColor="yellow";
+            }
+            //鼠标移出事件
+            a.onmouseout=function () {
+                a.style.backgroundColor="black";
+            }
+            //鼠标按下事件
+            a.onmousedown=function () {
+                a.style.backgroundColor="blue";
+            }
+            //鼠标松开事件
+            a.onmouseup=function () {
+                a.style.backgroundColor="green";
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+
+</div>
+</body>
+</html>

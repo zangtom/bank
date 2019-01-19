@@ -1,0 +1,8 @@
+SELECT * FROM yupp.stu_info s;
+alter table yupp.stu_info add index aaaa (stu_id,card_id);
+
+alter table yupp.stu_info add index bbb (stu_id);
+alter table yupp.stu_info drop primary key cccc (stu_id,card_id);
+alter table yupp.stu_info add primary key cccc (card_id);
+alter table yupp.stu_info drop unique dddd (stu_id,card_id);
+alter table yupp.stu_info add unique dddd (stu_id,card_id);

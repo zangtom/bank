@@ -1,0 +1,112 @@
+CSS选择器:把某一个想要的标签选中的方式就是所谓的“选择器”
+功能：把所需要的标签选中，然后操作选中的标签的css样式
+1.元素选择器：
+通过标签名选中其元素，并且修改样式。
+2.id选择器：
+我们可以为元素设置一个id，然后针对这个id的元素进行css样式操作。
+3.class选择器:
+我们可以对相同的元素或不同的元素设置一个class，然后针对这个class元素进行css样式操作
+4.子元素选择器:
+选中某个元素下的子元素，然后对该子元素设置css样式
+5.相邻选择器:
+选中该元素的下一个兄弟元素
+6.群组选择器:
+同时对几个选择器进行相同的操作
+7.全局选择器(通配符):
+控制所有元素
+
+css控制字体样式:
+在制作html页面时，最先考虑的就是字体的样式，字体样式属性往往包括字体大小
+粗细、颜色等方面。
+1.font-family：设置字体类型（支持中文）
+2.font-size: 设置字体大小(像素值、关键字 x-small、xx-lager等)
+3.font-weight：设置字体的粗细（数值100-900、关键字）
+normal  默认值        400
+lighter 较细 
+bold    较粗          700
+bolder  很粗          900    
+4.color:设置字体颜色（关键字、16进制的RGB值）
+5.font-style：设置字体斜体
+normal  默认值
+italic  斜体
+oblique 斜体(针对没有斜体属性的特殊字体)
+
+css控制文本样式：
+文本样式主要涉及多个文字的排版效果
+1.text-decoration：设置下划线、删除线、顶划线
+none                去除下划线、删除线、顶划线
+underline           下划线
+line-through        删除线
+overline            顶划线
+2.text-transform：文本大小写转换
+none           默认值(无转换发生)
+uppercase      转换成大写
+lowercase      转换成小写
+capitalize     将英文单词的首字母大写
+3.text-indent：段落首行缩进
+4.text-align:  设置文本水平对齐方式
+left       默认值(左对齐)
+center     居中对齐
+right      右对齐
+5.line-height：行高
+两行基线之间的垂直距离
+6.letter-spacing字距、word-spacing词距：
+单位: px
+字：每一个中文文字和英文字母都可看做为一个“字”
+词：以空格为基准进行控制   hello world 你好 世界
+
+css控制边框样式：
+任何的块元素和行内元素都可以设置边框属性
+1.border-width    边框的宽度
+2.border-style    边框的外观
+none      无样式
+solid     实线
+dashed    虚线
+dotted    点线
+double    双线(双线的宽度等于border-width值)
+inset     内凹
+outset    外凸
+ridge     脊线
+groove    槽线
+3.border-color    边框的颜色
+
+css控制背景样式：
+背景颜色：
+背景图片：
+1.background-image     定义背景图像的路径
+2.background-repeat    定义背景图像显示方式
+no-repeat：表示不平铺
+repeat：   默认值(水平和垂直方向同时平铺)
+repeat-x:  水平方向平铺(x轴)
+repeat-y:  垂直方向平铺(y轴)
+3.background-position  定义背景图像具体位置
+像素值：
+语法：background-position:像素值 像素值
+关键字：
+语法：background-position:关键字 关键字
+top  left       左上
+top  center     靠上居中
+top  right      右上
+left center     靠左居中
+center center   正中央
+right center    靠右居中
+bottom left     左下
+bottom center   靠下居中
+bottom right    右下
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+

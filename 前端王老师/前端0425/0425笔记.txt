@@ -1,0 +1,72 @@
+window对象
+1.改变窗口的大小：
+resizeTo(x,y)  x改变后的宽度，y改变后的高度
+resizeBy(x,y)  当x和y的值大于0时表示扩大，小于0时表示缩小
+2.窗口历史：当浏览器产生前进和后退的功能时，也就出现了窗口历史
+javascript:window.history.back() 上一页
+javascript:window.history.forward() 下一页
+3.定时器：在网页凡是可以自动执行的功能，大部分都与定时器相关
+setTimeout();       设置一次性的定时器
+clearTimeout();     取消一次性的定时器
+setInterval();      设置重复性的定时器 
+clearInterval();    取消重复性的定时器
+4.js对话框
+alert(); 仅有提示文字，没有返回值
+confirm();具有提示文字，返回"布尔值"
+prompt();具有提示文字，返回"字符串"
+
+document文档对象
+title     设置网页标题
+URL       显示文档地址
+fileCreateDate  文档创建日期
+fileModifiedDate 文档修改时间(精确到天)
+fileModified     文档修改时间(精确到秒)
+fileSize         文档大小
+fgColor     定义文档的前景色
+bgColor     定义文档的背景色
+
+DOM(document object model)文档对象模型:
+1.DOM  vs  document
+DOM是一种技术规范，相当于架构；
+document是具体的对象，也就是DOM中的一种实现。
+2.DOM简介：
+在网页某个地方添加元素或者删除元素等操作，都是通过DOM来实现的。也就是说。DOM相当于一个接口，我们可以通过DOM来操作页面中的各种元素。
+D(文档)：网页
+O(对象): document对象 
+M(模型): 网页文档的树型结构
+节点树：在加载HTML页面时，web浏览器生成一个树型结构，用来表示页面内部结构，
+DOM将这种树型结构理解为由节点组成。
+3.节点概念：
+根节点：
+在HTML文档中，html标签就是跟节点
+父节点:
+一个节点之上的节点就是该节点的父节点
+子节点：
+一个节点之下的节点就是该节点的子节点
+兄弟节点：
+如果多个节点在同一层次，并且拥有相同的父节点，那么这几个节点为兄弟节点
+4.节点种类:
+例如：<a href="a.html">超链接</a>
+属性节点:   href="a.html"
+元素节点：  a
+文本节点:   超链接
+结论:在DOM中，每一个元素看成一个节点，而每一个节点就是一个“对象”,
+也就是说，我们在操作元素时，把每一个元素节点看成一个对象，然后使用这个对象
+的属性和方法进行相关操作。
+5.节点操作:
+创建节点
+createElement()创建元素节点
+createTextNode()创建文本节点
+appendChild()和insertBefore()把文本节点插入到元素节点中
+语法：obj.appendChild(new)      obj表示当前节点，new表示新节点
+插入节点
+删除节点
+复制节点
+   
+
+
+
+
+
+
+

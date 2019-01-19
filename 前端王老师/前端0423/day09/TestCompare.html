@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function compare() {
+            var a=document.getElementById("text1").value;
+           var b= document.getElementById("text2").value;
+           if(a>b){
+               window.alert("第一个文本框数值大");
+           }else{
+               window.alert("第二个文本框数值大");
+           }
+        }
+    </script>
+</head>
+<body>
+第一个数：<input id="text1" type="text"><br/>
+第二个数：<input id="text2" type="text"><br/>
+<input type="button" value="比较" onclick="compare()">
+
+</body>
+</html>

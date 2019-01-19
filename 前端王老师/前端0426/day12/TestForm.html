@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单事件</title>
+</head>
+<body>
+<span id="span1">文本框</span>
+<input id="text1" type="text">
+<script type="text/javascript">
+var a=document.getElementById("span1");
+var b=document.getElementById("text1");
+//获取焦点
+b.onfocus=function () {
+    a.style.color="blue";
+}
+//失去焦点
+b.onblur=function () {
+    a.style.color="red";
+}
+//选中内容
+    b.onselect=function () {
+        alert("选中内容");
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容伪类选择器</title>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                //:contains(text)选取内容
+                   // $("p:contains(\"段落\")").css("color","red");
+                    $("p:has(strong)").css("color","green");
+            })
+        })
+    </script>
+</head>
+<body>
+<p class="p1">段落标签</p>
+<p><strong id="strong1">你好</strong></p>
+<em>段落</em>
+<input id="btn" type="button" value="按钮">
+
+</body>
+</html>

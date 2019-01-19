@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        p {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        var n = 0;    //定义全局变量，用于记录秒数
+        var flag = 0;
+        window.onload = function () {
+            //设置定时器，重复执行函数add()
+            var t = setInterval("add()", 1000);
+            //点击“暂停”按钮事件
+            document.getElementById("btn_pause").onclick = function () {
+                //取消定时器
+                clearInterval(t);
+                flag = flag + 1;
+            }
+            //点击“继续”按钮事件
+            document.getElementById("btn_continue").onclick = function () {
+                if (flag == 1) {
+                    if (confirm("你还要继续看我吗？")) {
+                        t = setInterval("add()", 1000);
+                        flag = flag - 1;
+                    }
+                }
+            }
+        }
+        //定义计时函数
+        function add() {
+            n++;
+            document.getElementById("num").innerHTML = n;
+        }
+    </script>
+</head>
+<body>
+<p>你已经看我<span id="num">0</span>秒了，不要再看了！</p>
+<input id="btn_pause" value="暂停" type="button"/>
+<input id="btn_continue" value="继续" type="button"/>
+</body>
+</html>

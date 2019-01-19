@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ul
+        {
+            list-style-type: none;
+        }
+    </style>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                //设置多个css属性  ul li:nth-child(odd)
+                $("li:even").css({"color":"red","background-color":"yellow"});
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>HTML+CSS进阶</li>
+    <li>JavaScript</li>
+    <li>jQuery</li>
+</ul>
+<input id="btn" type="button" value="设置" />
+</body>
+</html>

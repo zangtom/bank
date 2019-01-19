@@ -1,0 +1,10 @@
+SELECT * FROM market.member_gz_coupon m;
+create view market.view_member_gz_coupon as
+select  LEFT(FROM_UNIXTIME(create_time),10),member_id,count(*) from market.member_gz_coupon where
+create_time>=UNIX_TIMESTAMP('2018-04-09 00:00:00') and create_time<=UNIX_TIMESTAMP('2018-04-09 23:59:59') group by member_id;
+drop view market.view_member_gz_coupon;
+
+select *from market.view_member_gz_coupon;
+select concat(current_date(),'00:00:00');
+select concat(current_date(),'23:59:59');
+get_time

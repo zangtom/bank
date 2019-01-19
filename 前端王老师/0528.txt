@@ -1,0 +1,28 @@
+策略模式
+需要新的设计模式，应对项目的扩展性，降低复杂度：
+1.分析项目变化与不变部分，提取变化部分，抽象成接口+实现；
+2.鸭子哪些功能时会根据新需求变化的？飞行的速度、吃鱼的速定义两个接口，产生各自的行为族
+public interface Fly{
+void fly（）；
+public interface Eat{
+void eat）；
+好处：新增行为简单，行为类更好的复用，组合更方便。
+package com.example.single；
+public class Car{
+private static Car car=new Car（）；
+/∥私有化构造器private Car（）{
+//静态工厂public static Car getInstance（）{
+return car；
+
+
+
+
+package com.example.single；
+public class Test{
+public static void main（string【】args）{
+//ToDO Auto-generated method stub Car carl=Car.getInstance（）；
+Car car2=Car.getInstance（）；
+if（carl==car2）{
+System.out.println（“相同”）；
+}else{
+System.out.println（“不相同”）；

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                var $strong = "<strong>你好，js!</strong>";
+                $("p").after($strong);
+            })
+        })
+    </script>
+</head>
+<body>
+<p>你好，jQuery!</p>
+<input id="btn" type="button" value="appendTo插入"/>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串对象</title>
+    <script type="text/javascript">
+        var str="天将降大任于斯人也";
+        var str1="How are you";
+        var str2="你好";
+        //获取字符串长度
+        document.write(str.length+"<br>");
+        //检索字符串
+        document.write(str.match("斯人")+"<br>");
+        document.write(str.match("孟子")+"<br>");
+        //检索字符串索引
+        document.write(str.indexOf("斯人")+"<br>");
+        document.write(str.indexOf("孟子")+"<br>");
+        //替换
+        document.write(str.replace("斯人","孟子")+"<br>");
+        //通过角标获取字符串中某一个字符
+        document.write(str.charAt(0)+"<br>");
+        //大转小
+        document.write(str1.toLowerCase()+"<br>");
+        //小转大
+        document.write(str1.toUpperCase()+"<br>");
+        //字符串拼接
+        document.write(str.concat(str1,str2)+"<br>");
+        //字符换分割
+        document.write(str1.split("o")+"<br>");
+        //字符串截取（含头不含尾）
+        document.write(str.substring(0,3));
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

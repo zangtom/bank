@@ -1,0 +1,43 @@
+div(division)标签:主要用来为HTML文档内大块的内容提供结构和背景。用来划分一个区域。
+
+<form>表单</form>:
+文本框、按钮、下拉菜单等就是我们常见的表单元素。最重要的
+作用就是在客户端收集用户的信息，然后将数据递交给服务器来处理。
+表单内部标签(4种):
+<input/>:   
+text        文本框
+password    密码域
+radio       单选框
+checkbox    多选框
+url         网址框
+email       邮箱框
+color       颜色框
+number      数字框
+button      普通按钮
+reset       重置按钮
+submit      提交按钮
+<textarea></textarea>大文本域:
+<select></select>和<option></option>:下拉列表
+
+get和post 区别:
+1.
+get:提交的信息都显示在地址栏中
+post:提交的信息不显示地址栏中
+2.
+get:对于敏感的数据信息不显示
+post:对于敏感信息安全
+
+CSS层叠样式表:控制网页的外观修饰
+css的引入方式:
+1.外部样式表：
+把css代码和html代码单独放在不同的文件中，然后在html文档中使用
+link标签来引入。
+2.内部样式表：
+把css代码和html代码放在同一个文件中,其中css代码放在style标签中,并且style标签放在head标签中。
+3.内联样式表：
+把css代码和html代码放在同一个文件中，但是跟内部样式表不同，是在标签的style属性中定义。
+
+
+
+
+

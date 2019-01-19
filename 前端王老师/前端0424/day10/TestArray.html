@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script type="text/javascript">
+        function click1() {
+            var a = prompt("请输入一个数字：");
+            var arr = new Array(1,2,3,4,5);
+            if (a!=null && a!="")
+            {
+                var z = 0;
+                for(var i=0;i<arr.length;i++){
+                    if(a == arr[i]){
+                        z = 1;
+                        break;
+                    }
+                }
+                if(z==0){
+                    arr.push(a);
+                    window.alert(arr);
+                }else{
+                    window.alert("该元素已存在！");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="弹出" onclick="click1()">
+</body>
+</html>

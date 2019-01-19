@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload=function () {
+        var list = document.getElementById("list");
+       }
+        function insert() {
+            //创建元素节点
+            var e = document.createElement("li");
+            var str = document.getElementById("txt").value; //获取文本框的值
+            //创建文本节点
+            var txt = document.createTextNode(str);
+            //文本节点向元素节点插入
+            e.appendChild(txt);
+            //子元素节点向父元素节点插入
+            //list.appendChild(e);
+s            //list.firstChild选取第一个子元素
+            list.insertBefore(e,list.firstChild);
+        }
+        function del() {
+            //判断空格
+           if (list.lastChild.value = " ") {
+                list.removeChild(list.firstChild);
+            }
+
+            list.removeChild(list.firstChild);
+        }
+
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+列项文本：<input id="txt" type="text"/><br />
+<input type="button" value="插入新项" onclick="insert()" />
+<input type="button" value="删除节点" onclick="del()" />
+</body>
+</html>

@@ -1,0 +1,14 @@
+Struts2：
+以Webwork优秀的设计思想为核心，吸收了Struts1的部分优点，建立了一个兼容Webwork和Struts1的MVC框架。
+Struts2的目标是希望可以让原来使用Struts1、WebWork的开发人员，都可以平稳过渡到使用Struts2框架
+由出色稳定的框架Struts1和WebWork框架整合而来（接近于WebWork）
+吸取了两大框架的优点
+提高了开发效率和规范性
+更好的实现了MVC架构
+解除了与Servlet的强耦合性
+namespace决定了action的访问路径，默认为“”，可以接收所有路径的action
+namespace可以写为/，或者/xxx，或者/xxx/yyy，对应的action访问路径为/index.action，/xxx/index.action，或者/xxx/yyy/index.action。
+   <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>

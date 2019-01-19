@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数调用</title>
+    <style type="text/css">
+        .button1{
+            border: none;
+        }
+        .a1{
+            text-decoration: none;
+        }
+    </style>
+    <script type="text/javascript">
+      /*  function sum(a,b) {
+            return a+b;
+        }
+        //在表达式中调用函数
+        document.write(sum(1,2));*/
+      function mes() {
+          window.alert("在响应事件中调用");
+      }
+      function mes2() {
+          window.alert("在链接中调用");
+      }
+    </script>
+</head>
+<body>
+<input class="button1" type="button" value="点击按钮" onclick="mes()">
+<a class="a1" href="javascript:mes2()">超链接</a>
+</body>
+</html>
