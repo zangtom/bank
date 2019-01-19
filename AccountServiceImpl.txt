@@ -1,0 +1,37 @@
+package com.farsight.book.service;
+
+import com.farsight.book.bean.Account;
+import com.farsight.book.dao.AccountDao;
+import com.farsight.book.dao.DaoFactory;
+//转账操作的实现
+public class AccountServiceImpl implements AccountService{
+	AccountDao accountDao=DaoFactory.getAccountDao();
+	@Override
+	public void transfer(Account a1, Account a2, int tMoney) {
+	
+		//获取第一个账户的信息
+		
+		Account account1=accountDao.getAccountById(a1.getId());
+		//更新第一个账户的信息
+		int b1=account1.getBanlance()-tMoney;
+		account1.setBanlance(b1);//此时account对象内部的账户额度已经发生了变化
+		accountDao.updateAccount(account1);
+		
+		
+		//获取第二个账户的信息
+		
+		Account account2=accountDao.getAccountById(a2.getId());
+		//更新第二个账户的信息
+		int b2=account2.getBanlance()+tMoney;
+		account2.setBanlance(b2);//此时account对象内部的账户额度已经发生了变化
+		accountDao.updateAccount(account2);
+		
+	}
+
+	@Override
+	public Account getAccount(int id) {
+		Account account=accountDao.getAccountById(id);
+		return account;
+	}
+
+}

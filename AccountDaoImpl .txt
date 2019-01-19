@@ -1,0 +1,42 @@
+package com.farsight.book.dao;
+
+import java.sql.SQLException;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+
+import com.farsight.book.bean.Account;
+import com.farsight.book.util.JdbcUtils;
+//对account域内的记录（对象）要执行的操作的具体实现
+public class AccountDaoImpl  implements AccountDao{
+
+	@Override
+	public Account getAccountById(int id) {
+	String sql ="select * from test.account where id=?";
+	QueryRunner qy=new QueryRunner(JdbcUtils.pool);
+	Account account=null;
+	try {
+		account = qy.query(sql, new BeanHandler<>(Account.class),id);//单行处理器
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	return account;
+	}
+
+	@Override  //重新设定banlance
+	public void updateAccount(Account account) {
+		String sql ="update test.account set banlance=? where id=?";
+		QueryRunner qy=new QueryRunner(JdbcUtils.pool);//简历连接
+		try {
+			qy.update(sql, account.getBanlance(),account.getId()); //重新设定banlance
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

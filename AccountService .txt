@@ -1,0 +1,10 @@
+package com.farsight.book.service;
+
+import com.farsight.book.bean.Account;
+//转账操作的接口
+public interface AccountService {
+	
+	void transfer(Account a1,Account a2,int tMoney);
+	Account getAccount(int id);
+
+}

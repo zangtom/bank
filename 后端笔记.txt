@@ -1,0 +1,232 @@
+web后端
+web应用：
+浏览器 输入网址 服务端上的程序
+
+web服务器，xml，http
+servlet
+JSP
+JDBC
+
+JDBC:
+java database connectivity;java数据库连接
+用Java语言来操作数据库
+在客户端通过SQL语句操作数据库
+通过Java像数据库发送sql命令
+实现jdbc的一系列类称之为驱动
+Java------》jdbc驱动-----》数据库
+Java.sql包
+drivermanager：
+加载驱动
+获取connection对象
+connection对象：和数据库通信的基础
+也可以获取statement对象
+
+statement：接收statement对象，向数据库发送一系列的的sql命令
+resultset：接受数据库查询的返回值。接受的是一个集合，一个二维表格
+
+preparedstatement：
+好处：防止sql注入，效率高。
+***********************************************************************************
+调用存储过程：
+加载驱动
+制定sql（参数用占位符指定）
+参数赋值，（输出指定返回值类型即可）
+执行sql
+打印输出sql返回值（先赋值）
+关闭连接
+
+软件开发模式
+mvc：model view controller
+模块化视图控制器
+******************************************************************
+*model：对业务的处理，对数据库的操作。
+*service：
+*dao：Data Access Object（数据访问对象） 接口封装在里面定义一个实体域
+*方法定义在DAO里面
+*****************************************************************
+业务开发过程中都是面向接口的开发。结构和实现是相互分离的
+定义userdao接口的实现类userdaoimpl
+数据库
+controller：接受视图的请求并反馈给模型，反之亦可
+视图：用户可见的图形化界面。
+
+c3p0:第三方连接池
+dbutils：数据库工具
+DBUtils、commons-dbuti1s简介commons-dbuti1s是Apache组织提供的一个开源JDBC工具类库，它是对JDBC的简单封装，学习成本极低，并且使用dbutils能极大简化jdbc编码的工作量，同时也不会影响程序的性能。
+
+commons-dbuti1s API介绍：
+
+org.apache.commons.dbutils.QueryRunner 
+org.apache.commons.dbutils.ResultSetHandler 
+工具类 
+org.apache.commons.dbutils.DbUtils、QueryRunner类使用讲解该类简单化了sQL查询，它与ResultSetHandler组合在一起使用可以完成大部分的数据库操作，能够大大减少编码量。
+
+QueryRunner类提供了两个构造方法：
+
+默认的构造方法需要一个javax.sql.DataSource来作参数的构造方法。
+QueryRunner 当创建QueryRunner对象时，构造器的参数指定为javax.sql.DataSource的接口对象。
+
+在QueryRunner对象在CRUD时会自动从连接池获取连接，用完自动释放到连接池当创建QueryRunner对象时，构造器的参数指定为javax.sql.DataSource的接口对象。
+
+在QueryRunner对象在CRUD时会自动从连接池获取连接，用完自动释放到连接池
+三、ResultSetHandler接口使用讲解该接口用于处理java.sql.ResultSet，将数据按要求转换为另一种形式。
+
+ResultSetHandler接口提供了一个单独的方法：Object handle（java.sql.ResultSet.rs）
+3.1、ResultSetHandler接口的实现类ArrayHandler：把结果集中的第一行数据转成对象数组。
+
+ArrayListHandler：把结果集中的每一行数据都转成一个数组，再存放到List中。
+
+BeanHandler：将结果集中的第一行数据封装到一个对应的JavaBean实例中。
+
+BeanListHandler：将结果集中的每一行数据都封装到一个对应的JavaBean实例中，存放到List里。
+
+ColumnListHandler：将结果集中某一列的数据存放到List中。
+
+KeyedHandler（name）：将结果集中的一行数据都封装到一个Map里，再把这些map再存到一个map里，其key为指定的key。
+
+MapHandler：将结果集中的第一行数据封装到一个Map里，key是列名，value就是对应的值。
+
+MapListHandler：将结果集中的每一行数据都封装到一个Map里，然后再存放到List
+DBUtils提供了很多个ResultSetHandler接口的实现，这些实现已经基本够用了，我们通常不用自己去实现ResultSet接口了MapHandler：单行处理器！把结果集转换成Map，其中列名为键！
+
+MapListHandler：多行处理器！把结果集转换成List>；
+
+BeanHandler：单行处理器！把结果集转换成Bean，该处理器需要Class参数，即Bean的类型；
+
+BeanListHandler：多行处理器！把结果集转换成List
+
+ColumnListHandler：多行单列处理器！把结果集转换成List
+ColumnListHandler：多行单列处理器！把结果集转换成List
+***********************************单行处理器
+public class TestMain2{
+
+static void test1){
+
+String sql="select * from test. user limit 1"; QueryRunner qr=new QueryRunner(JdbcUtils. poof); try{
+
+User user=qr. query(sql, new BeanHandler<>(User. class)); System. out. printin(user. getName());
+
+System. out. printin(user. getPassword());
+
+} catch(SQLException e){
+
+//TODO Auto-generated catch block e. printStackTrace();
+
+}
+
+}
+************************************多行处理器
+static void test20{
+
+String sql="select * from test. user"; QueryRunner qr=new QueryRunner(JdbcUtils. poof); try{
+
+Listlist=qr. query(sql, new BeanListHandler(User. class)); for(User user: list){
+
+System. out. printin(user. getName());
+
+System. out. printin(user. getPassword());
+
+System. out. println("*************");
+**************************************计数处理器
+static void test4(){
+
+		String sql="select count(*) as num from test. user"; 
+		QueryRunner qr=new QueryRunner(jdbcUtlis.pool); 
+		try{
+
+		Object o=qr.query(sql, new ScalarHandler()); 
+		System.out.println(o); } 
+		catch(SQLException e){
+
+		//TODO Auto-generated catch block e. printStackTrace();
+
+		}
+***************************************************
+static void test6(){
+
+					String sql="select name, password from test. user limit 3"; 
+					QueryRunner qr=new QueryRunner(jdbcUtlis. pool); try{
+
+					List<Map<String,Object>> list=qr.query(sql,new MapListHandler());
+					for (Map<String, Object> map : list) {
+						System.out.println(map.get("name"));
+						System.out.println(map.get("password"));
+					}
+					} catch(SQLException e){
+
+					//TODO Auto-generated catch block e. printStackTrace();
+					}
+******************************************************************
+					static void test7(){
+
+						String sql="select password from test. user limit 3"; 
+						QueryRunner qr=new QueryRunner(jdbcUtlis. pool); try{
+
+						List<Object> List=qr.query(sql,new ColumnListHandler());
+
+						} catch(SQLException e){
+
+						//TODO Auto-generated catch block e. printStackTrace();
+						}
+事务什么是事务？
+
+转账：
+
+i。给张三账户减1000元2.给李四账户加1000元使用事务就可以处理这一问题：把多个对数据库的操作绑定成一个事到，要么都成功，要么都失败！
+
+事物的特性：ACID*原子性：事务中所有操作是不可再分割的原子单位。事务中所有操作要么全部执行成功，要么全部执行失败。
+
+*一致性：事务执行后，数据库状态与其它业务规则保持一致。如转账业务，无论事务执行成功写否，参与转账的两个*隔离性：隔离性是指在并发操作中，不同事务之间应该隔离开来，使每个并发中的事务不会相互千扰。
+
+*持久性：一旦事务提交成功，事务中所有的数据操作都必须被持久化到数据库中，即使提交事务后，数据库马上崩渍在默认情况下，MySQL每执行一条SQL语句，都是一个单独的事务。如果需要在一个事务中包含多条SQL语句，那么需要MySQL操作事务1.开始事务：start transaction2.结束事务：commit或rol1back
+
+
+
+应用程序通常都有哪两种模式：
+
+C/S多是建立的Window平台上B/S 建立在浏览器上什么是Web应用当我们通过浏览器访问新浪网，中华网等公司的网站时，这些就是web应用。
+
+浏览器输入网址远程服务器上运行的程序Web应用就是网站上的这些程序程序的最大好处：用户只需要有浏览器，而系统的更新也只需要管理员替换服务器文件就可以实现，无需用户去下载客户端。
+
+WEB应用程序一般是B/S模式.Web应用程序首先是“应用程序”，和用标准的程序语言，如C、C++等编写出来的程序没有什么本地访问一个文件本地路径下，物理地址访问网络上访问一个本地文件通过http协议【因特网上的传输协议访问】，如何本地能够识别这个协议，接收这个协议的请求。
+
+需要装一个基于因特网的计算机程序，这个程序称为web服务器。
+
+激活Wind当衰好web服务器之后，将图片视频等按web服务器要求指定存放，http协议访问时就可以返回。一选一章
+背景知识：
+
+
+
+MVC框架模式的优点
+1、开发人员可以只关注整个结构中的其中某一层；
+2、可以很容易的用新的实现来替换原有层次的实现；
+3、可以降低层与层之间的依赖；
+4、有利于标准化；
+5、利于各层逻辑的复用。
+做一个Web开发的流程需求分析美工设计前端页面布局数据库设计后台功能设计【前后台实现动态交互】
+项目测试
+bin：可执行的命令
+conf：配置文件信息
+server.xml配置的是服务器的信息
+web.xmln多个web application的配置信息
+tomcat-user.xml 如果要管理服务器或者说管理服务器里的应用，必须是使用tomcat-user配置的用户
+1ib：类库
+logs：日志文件
+temp：临时文件
+webapps：很多个web application
+work：工作目录
+
+servlet的本质服务端的程序，是一段java程序接收客户端发送过来的请求证ava其他的代码片段进行处理问客户端作出响应，发送回来文本数据6中，09g.tAservlet的容器是Tomcatweb容器接收请求，把请求发给servlet来处理j2ee,sun公司定义了servlet的规范.tomcat实现了servlet接口 servlet-api.jarjavax.servlet 包下servlet对象的生命周期对象的创建只执行一次，第一次发送请求的时候，servlet对象被创建，之后就始终存在于内存空间里【tomcat容器创建的：
+信息的初始化【tomcat容器创建servletConfig对象，在进行初始化的时候，把confg携带的配置参数给servlet对象】初始业务处理【每一次的请求都会去调用service（）方法，对请求进行处理和返回】
+对象销毁【程序终止或是容器的服务停了或者是项目被重新加载的时候】
+ServletConfig 存着当前这个servlet的配置参数ServletRequest 携带的是浏览器的请求ServletResponse 可以设置服务器端的响应动态web，浏览器发送的请求都是给servlet进行处理.servlet返回的是一段文本
+
+
+
+
+
+
+
+
+
+

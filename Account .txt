@@ -1,0 +1,54 @@
+package com.farsight.book.bean;
+
+public class Account {
+	
+	private Integer id;
+	
+	private  String name;
+	
+	private int banlance;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getBanlance() {
+		return banlance;
+	}
+
+	public void setBanlance(int banlance) {
+		this.banlance = banlance;
+	}
+
+	
+//有参实现
+	public Account(Integer id, String name, int banlance) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.banlance = banlance;
+	}
+//无参实现
+	public Account() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+	
+
+}

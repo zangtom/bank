@@ -1,0 +1,18 @@
+package com.farsight.book.test;
+
+import com.farsight.book.bean.Account;
+import com.farsight.book.service.AccountService;
+import com.farsight.book.service.ServiceFactory;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		//要对账户进行转账操作，新建service（转账service）
+        AccountService accountService=ServiceFactory.getAccountService();
+        //传入账户，执行转账服务
+        Account a1=accountService.getAccount(1);
+        Account a2=accountService.getAccount(2);
+        accountService.transfer(a1,a2,100);
+	}
+
+}

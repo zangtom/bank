@@ -1,0 +1,13 @@
+package com.farsight.book.dao;
+
+import com.farsight.book.bean.Account;
+//对account域内的记录（对象）要执行的操作
+public interface AccountDao {
+
+	public  Account  getAccountById(int id);
+	
+	public void       updateAccount(Account account);
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+重写2：
+@ Override public void updateAccount(Account account){
+String sql="update test. account set banlance=? where id=?"; 
+QueryRunner qy=new QueryRunner(Jdbcutils. poof); 
+try{
+qy. update(sql, account. getBanlance(), account. getId());
+} catch(SQLException e){
+//TODO Auto-generated catch llock e. printStackTrace();
+****************
+dao工厂
+package com. farsight. book. dao; public class DaoFactory{
+
+static AccountDao accountDao=new AccountDaolmpl(); public static AccountDao getAccountDao(){
+
+return accountDao;
+*******************
+accser实现
+@Override public void transfer（Account a1，Account a2，int tMoney）{
+AccountDao accountDao=DaoFactory.getAccountDao（）；//获取第一个账户的信息Account account1=accountDao.getAccountById（al.getId（））；/更新第一个账户的信息int b1=account1.getBanlance（）-tMoney；account1.setBanlance（b1）；//此时account对象内部的账户额度已经发生了变化accountDao.updateAccount（account1）；
+//获取第二个账户的信息Account account2=accountDao.getAccountById（a2.getld（））；
+/更新第二个账户的信息int b2=account2.getBanlance（）+tMoney；account2.setBanlance（b2）；//此时account对象内部的账户额度已经发生了变化accountDao.updateAccount（account2）；
+***************************主函数实现
+AccountService accountService=ServiceFactory. getAccountService();
+Account al=accountService. getAccount(1); 
+*****************
+https://www.baidu.com/index.php?tn=site888_3_pg&ssl_s=1&ssl_c=ssl1_16343b6536b&prec=1
+
+
+Account a2=accountService. getAccount(2);
+| accountService. transfer(a1,a2,100);

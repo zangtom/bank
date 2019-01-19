@@ -1,0 +1,26 @@
+<table width="60%" border="1">
+<tr>
+    <th>Ñ§ºÅ</th>
+
+    <th>ĞÕÃû</th>
+
+</tr>
+<%
+
+        ArrayList list = (ArrayList)request.getAttribute("list"); 
+
+       for(int i=0;i<list.size();i++){
+            if(i%3==0){
+                out.println("<tr>");
+
+            }
+
+if(i%3==2){
+                out.println("</tr>");
+
+            }else{
+                out.println("<td>"+list.get(i)+"</td>");
+            }
+        }
+%>
+</table>

@@ -1,0 +1,10 @@
+<div id="abc">原始内容</div>
+<a href="javascript:cha()">改变</a>
+<script language="javascript">
+ function cha()
+{
+  abc.innerHTML="新内容";
+}
+</script>
+**************
+超链接改变某个区域的显示内容

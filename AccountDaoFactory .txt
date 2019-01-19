@@ -1,0 +1,15 @@
+package com.farsight.book.dao;
+
+public class DaoFactory {
+//对account记录要执行的操作的模板（不同参数，不同实现，方法相同****多态的思想）
+	static AccountDao accountDao=new AccountDaoImpl();
+	
+	
+	public static AccountDao getAccountDao(){
+		
+		return accountDao;
+	}
+	
+	
+	
+}

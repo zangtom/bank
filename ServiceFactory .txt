@@ -1,0 +1,10 @@
+package com.farsight.book.service;
+//对要执行的操作service的模板（不同参数，不同实现，方法相同****多态的思想）
+public class ServiceFactory {
+	public static AccountService accountService=new AccountServiceImpl();
+	
+	public static AccountService getAccountService(){
+		return accountService;
+	}
+
+}

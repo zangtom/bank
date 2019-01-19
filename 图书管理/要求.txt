@@ -1,0 +1,80 @@
+1：书籍种类
+    添加
+    查询列表
+    删除某个种类
+    修改某个种类
+
+category   conf_book_type
+    id
+    name
+    descroption
+
+
+新建一个web项目导入包，先把包放在WEB-INF  lib下 ，再用build path统一进行管理
+
+
+bean:   定义一个类    ConfBookType
+dao:    定义Dao       ConfBookTypeDao        ConfBookTypeDaoImpl
+【
+获取一个列表  select * from 
+新增          insert into
+删除         delete from where id=..
+修改        update  set  name=?  description = ?  where id=..?
+
+】
+service:定义Service   ConfBookTypeService    ConfBookTypeServiceImpl
+【
+4个方法
+获取列表
+新增
+删除
+修改
+
+
+
+】
+
+
+
+action: 定义一个Servlet    ConfBookTypeServlet
+页面设计：左边是功能导航栏，右边就是功能页面
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2：书籍
+   添加书籍 【可以添加图片，选择种类】
+   查询
+   删除
+   修改
+
+
+
+
+
+   
+
+
